@@ -1,3 +1,7 @@
+Forked from original repository in order to be used as a Platformio library in 
+ [urdflib](https://gitlab.com/coswot/constrained-servient/urdflib) only changes are [`cbor_export.h`](examples/bazel/third_party/libcbor/cbor/cbor_export.h)
+ and [`configuration.h`](examples/bazel/third_party/libcbor/cbor/configuration.h) being moved to [`src/cbor/`](src/cbor/) to avoid compilation errors.
+
 # [libcbor](https://github.com/PJK/libcbor)
 
 [![CircleCI](https://circleci.com/gh/PJK/libcbor/tree/master.svg?style=svg)](https://circleci.com/gh/PJK/libcbor/tree/master)
