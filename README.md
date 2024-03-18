@@ -3,7 +3,6 @@ Forked from original repository in order to be used as a Platformio library in
  
 - [`cbor_export.h`](examples/bazel/third_party/libcbor/cbor/cbor_export.h)
 - [`configuration.h`](examples/bazel/third_party/libcbor/cbor/configuration.h) being moved to [`src/cbor/`](src/cbor/) to avoid compilation errors. 
-- renaming of `cbor_encode_uint` as `cbor_encode_uint_` and `cbor_encode_tag` as `cbor_encode_tag_` to avoid conflicts with [TinyCBOR](https://github.com/intel/tinycbor) on ESP32.
 
 
 # [libcbor](https://github.com/PJK/libcbor)

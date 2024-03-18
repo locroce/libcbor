@@ -51,17 +51,17 @@ static void test_uint64(void **_CBOR_UNUSED(_state))
 
 static void test_unspecified(void **_CBOR_UNUSED(_state))
 {
-  assert_size_equal(9, cbor_encode_uint_(18446744073709551615ULL, buffer, 512));
+  assert_size_equal(9, cbor_encode_uint(18446744073709551615ULL, buffer, 512));
   assert_memory_equal(
       buffer,
       ((unsigned char[]){0x1B, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF}),
       9);
-  assert_size_equal(5, cbor_encode_uint_(1000000, buffer, 512));
+  assert_size_equal(5, cbor_encode_uint(1000000, buffer, 512));
   assert_memory_equal(buffer, ((unsigned char[]){0x1A, 0x00, 0x0F, 0x42, 0x40}),
                       5);
-  assert_size_equal(3, cbor_encode_uint_(1000, buffer, 512));
+  assert_size_equal(3, cbor_encode_uint(1000, buffer, 512));
   assert_memory_equal(buffer, ((unsigned char[]){0x19, 0x03, 0xE8}), 3);
-  assert_size_equal(2, cbor_encode_uint_(255, buffer, 512));
+  assert_size_equal(2, cbor_encode_uint(255, buffer, 512));
   assert_memory_equal(buffer, ((unsigned char[]){0x18, 0xFF}), 2);
 }
 

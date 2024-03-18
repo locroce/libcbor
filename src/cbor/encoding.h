@@ -40,8 +40,8 @@ extern "C"
     _CBOR_NODISCARD CBOR_EXPORT size_t cbor_encode_uint64(uint64_t, unsigned char *,
                                                           size_t);
 
-    _CBOR_NODISCARD CBOR_EXPORT size_t cbor_encode_uint_(uint64_t, unsigned char *,
-                                                         size_t);
+    _CBOR_NODISCARD CBOR_EXPORT size_t cbor_encode_uint(uint64_t, unsigned char *,
+                                                        size_t);
 
     _CBOR_NODISCARD CBOR_EXPORT size_t cbor_encode_negint8(uint8_t, unsigned char *,
                                                            size_t);
@@ -89,8 +89,8 @@ extern "C"
     _CBOR_NODISCARD CBOR_EXPORT size_t cbor_encode_indef_map_start(unsigned char *,
                                                                    size_t);
 
-    _CBOR_NODISCARD CBOR_EXPORT size_t cbor_encode_tag_(uint64_t, unsigned char *,
-                                                        size_t);
+    _CBOR_NODISCARD CBOR_EXPORT size_t cbor_encode_tag(uint64_t, unsigned char *,
+                                                       size_t);
 
     _CBOR_NODISCARD CBOR_EXPORT size_t cbor_encode_bool(bool, unsigned char *,
                                                         size_t);
