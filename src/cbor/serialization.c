@@ -412,7 +412,7 @@ size_t cbor_serialize_tag(const cbor_item_t *item, unsigned char *buffer,
                           size_t buffer_size)
 {
   CBOR_ASSERT(cbor_isa_tag(item));
-  size_t written = cbor_encode_tag(cbor_tag_value(item), buffer, buffer_size);
+  size_t written = cbor_encode_tag_urdflib(cbor_tag_value(item), buffer, buffer_size);
   if (written == 0)
     return 0;
 

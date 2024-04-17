@@ -32,8 +32,8 @@ size_t cbor_encode_uint64(uint64_t value, unsigned char *buffer,
   return _cbor_encode_uint64(value, buffer, buffer_size, 0x00);
 }
 
-size_t cbor_encode_uint(uint64_t value, unsigned char *buffer,
-                        size_t buffer_size)
+size_t cbor_encode_uint_urdflib(uint64_t value, unsigned char *buffer,
+                                size_t buffer_size)
 {
   return _cbor_encode_uint(value, buffer, buffer_size, 0x00);
 }
@@ -127,7 +127,7 @@ size_t cbor_encode_indef_map_start(unsigned char *buffer, size_t buffer_size)
   return _cbor_encode_byte(0xBF, buffer, buffer_size);
 }
 
-size_t cbor_encode_tag(uint64_t value, unsigned char *buffer,
+size_t cbor_encode_tag_urdflib(uint64_t value, unsigned char *buffer,
                        size_t buffer_size)
 {
   return _cbor_encode_uint(value, buffer, buffer_size, 0xC0);
