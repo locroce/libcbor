@@ -2,7 +2,10 @@ Forked from original repository in order to be used as a Platformio library in
  [urdflib](https://gitlab.com/coswot/constrained-servient/urdflib) only changes are:
  
 - [`cbor_export.h`](examples/bazel/third_party/libcbor/cbor/cbor_export.h)
-- [`configuration.h`](examples/bazel/third_party/libcbor/cbor/configuration.h) being moved to [`src/cbor/`](src/cbor/) to avoid compilation errors. 
+- [`configuration.h`](examples/bazel/third_party/libcbor/cbor/configuration.h) 
+
+being moved to [`src/cbor/`](src/cbor/) to avoid compilation errors. And `cbor_encode_uint()` and `cbor_encode_tag()` being renamed as 
+ `cbor_encode_uint_urdflib()` and `cbor_encode_tag_urdflib()`, overriding the CBOR API to avoid conflicts on ESP32.
 
 
 # [libcbor](https://github.com/PJK/libcbor)
